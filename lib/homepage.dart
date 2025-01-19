@@ -41,30 +41,46 @@ class HomepageState extends State<Homepage> {
             itemCount: vehicles.length,
             itemBuilder: (context, index) {
               final vehicle = vehicles[index];
-              return ListTile(
-                title: Text(vehicle['name']),
-                subtitle: Text(
-                    'Status: ${vehicle['status']}, Location: ${vehicle['location']}'),
-                trailing: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Fuel: ${vehicle['fuel_level']}%'),
-                    Text('Battery: ${vehicle['battery_level']}%'),
-                  ],
+              return Card(
+                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                onTap: () async {
-                  bool? shouldReload = await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => EditVehicle(vehicle: vehicle)),
-                  );
+                child: ListTile(
+                  contentPadding: EdgeInsets.all(16),
+                  title: Text(
+                    vehicle['name'],
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Status: ${vehicle['status']}'),
+                      Text('Location: ${vehicle['location']}'),
+                    ],
+                  ),
+                  trailing: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Fuel: ${vehicle['fuel_level']}%', style: TextStyle(color: Colors.green)),
+                      Text('Battery: ${vehicle['battery_level']}%', style: TextStyle(color: Colors.blue)),
+                    ],
+                  ),
+                  onTap: () async {
+                    bool? shouldReload = await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EditVehicle(vehicle: vehicle)),
+                    );
 
-                  if (shouldReload == true) {
-                    setState(() {
-                      _vehiclesFuture = _service.fetchVehicles();
-                    });
-                  }
-                },
+                    if (shouldReload == true) {
+                      setState(() {
+                        _vehiclesFuture = _service.fetchVehicles();
+                      });
+                    }
+                  },
+                ),
               );
             },
           );
@@ -88,5 +104,3 @@ class HomepageState extends State<Homepage> {
     );
   }
 }
-
-

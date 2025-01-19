@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'services.dart';
 
 class EditVehicle extends StatefulWidget {
@@ -24,9 +25,12 @@ class _EditVehicleState extends State<EditVehicle> {
     super.initState();
     _nameController = TextEditingController(text: widget.vehicle["name"]);
     _statusController = TextEditingController(text: widget.vehicle["status"]);
-    _locationController = TextEditingController(text: widget.vehicle["location"]);
-    _fuelLevelController = TextEditingController(text: widget.vehicle["fuel_level"].toString());
-    _batteryLevelController = TextEditingController(text: widget.vehicle["battery_level"].toString());
+    _locationController =
+        TextEditingController(text: widget.vehicle["location"]);
+    _fuelLevelController =
+        TextEditingController(text: widget.vehicle["fuel_level"].toString());
+    _batteryLevelController =
+        TextEditingController(text: widget.vehicle["battery_level"].toString());
   }
 
   void _submitForm() async {
@@ -49,6 +53,14 @@ class _EditVehicleState extends State<EditVehicle> {
       final vehicleId = widget.vehicle['id'].toString();
 
       await _supabaseService.addOrUpdateVehicle(vehicleId, updatedVehicleData);
+      Fluttertoast.showToast(
+        msg: "Vehicle updated successfully!",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
 
       Navigator.pop(context, true);
     }
@@ -147,3 +159,4 @@ class _EditVehicleState extends State<EditVehicle> {
     );
   }
 }
+

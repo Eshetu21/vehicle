@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'services.dart';
 
 class AddVehicleScreen extends StatefulWidget {
@@ -36,7 +37,16 @@ class _AddVehicleScreenState extends State<AddVehicleScreen> {
 
       await _service.addOrUpdateVehicle(null, vehicleData);
 
-      Navigator.pop(context, true); // Notify homepage to reload.
+      Fluttertoast.showToast(
+        msg: "Vehicle added successfully!",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
+
+      Navigator.pop(context, true);
     }
   }
 
@@ -131,3 +141,4 @@ class _AddVehicleScreenState extends State<AddVehicleScreen> {
     );
   }
 }
+

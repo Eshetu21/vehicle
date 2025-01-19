@@ -14,7 +14,6 @@ This is a simple Flutter-based app designed to monitor and manage vehicle data i
 
 - **Flutter**: The framework used for building the cross-platform app.
 - **Supabase**: A backend-as-a-service platform used for managing data and authentication.
-- **Firebase** (optional): Used for additional services (if included).
 
 ## Setup Instructions
 

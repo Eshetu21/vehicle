@@ -49,4 +49,12 @@ To get the app running on your local machine or emulator, follow the instruction
 You can download the APK for the app from the link below:
 
 [Download APK](https://drive.google.com/file/d/13DMvViizfdYSIFcYqw9JeqLlV4loAiUC/view?usp=drive_link)
+
+### Screenshots
+Here are some screenshots of the app: 
+<p>
+  <img src="screenshot/home.jpg" alt="Homepage" width="200"/>
+  <img src="screenshot/add.jpg" alt="Add" width="200"/>
+  <img src="screenshot/edit.jpg" alt="Edit" width="200"/>
+</p>
    

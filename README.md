@@ -48,7 +48,7 @@ To get the app running on your local machine or emulator, follow the instruction
 
 You can download the APK for the app from the link below:
 
-[Download APK](https://drive.google.com/file/d/13DMvViizfdYSIFcYqw9JeqLlV4loAiUC/view?usp=drive_link)
+[Download APK](https://drive.google.com/file/d/1nlh2YvKluZeKBuzBClEDbsoXTEIvTu5D/view?usp=drive_link)
 
 ### Screenshots
 Here are some screenshots of the app: 

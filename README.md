@@ -30,7 +30,6 @@ To get the app running on your local machine or emulator, follow the instruction
 
    ```bash
    git clone https://github.com/Eshetu21/vehicle.git
-   cd car
    
 2. Install dependencies:
 

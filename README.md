@@ -29,9 +29,9 @@ To get the app running on your local machine or emulator, follow the instruction
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/vehicle-monitoring-app.git
-   cd vehicle-monitoring-app
-
+   git clone https://github.com/Eshetu21/vehicle.git
+   cd car
+   
 2. Install dependencies:
 
    ```bash

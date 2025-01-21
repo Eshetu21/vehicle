@@ -8,7 +8,7 @@ This is a simple Flutter-based app designed to monitor and manage vehicle data i
 
 - **View Vehicles**: List all vehicles with their details (name, status, location, fuel, and battery levels).
 - **Add New Vehicle**: Add a new vehicle to the system with necessary details.
-- **Edit Vehicle**: Update vehicle information, including name, status, location, fuel level, and battery level.
+- **Edit Vehicle**: Update vehicle information, including name, status, location, fuel level, and battery level(%).
 
 ## Tech Stack
 
